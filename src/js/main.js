@@ -743,7 +743,8 @@ async function displayWeather() {
     let data = await getWeather();
     let date = datePartsWithTime(data.current.time);
 
-    document.querySelector(".weather-location span").innerText = Explore.city;
+    document.querySelector(".weather-location #MyCity").innerText =
+      Explore.city;
     document.querySelector(
       "#weather-content .weather-location .weather-time",
     ).innerText = `${date.weekday}, ${date.month} ${date.day}, ${date.year}`;
